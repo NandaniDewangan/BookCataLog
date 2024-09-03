@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f3ec;
+    color: #333;
+}
+
+header {
+    background-color: #b57864;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    position: relative; /* Relative positioning for hamburger menu */
+}
+
+nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+#logo{
+    width: 80px;
+    border-radius: 50%;
+}
+.hamburger {
+    display: none; /* Hide by default */
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    background-color: #2e9e5b;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+}
+.welcome {
+    text-align: center;
+    padding: 20px;
+    background-color: #e6e0d4; /* Light background color to highlight the welcome message */
+    margin-bottom: 20px; /* Space below the welcome message */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.welcome h1 {
+    font-size: 32px;
+    color: #b57864; /* Match color with the theme */
+    margin: 0;
+}
+
+.book-list, .favorite {
+    display: grid; /* Use CSS Grid for responsive layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 40px; /* Space between grid items */
+    padding: 20px;
+    justify-items: center; /* Center items within the grid */
+}
+
+/* Book Card Styles */
+.book-card {
+    background-color: #f3d8c7;
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+    max-width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+.book-card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: grid !important; /* Ensure it remains in grid layout */
+}
+
+
+footer {
+    background-color: #a15e4b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative; /* Make footer non-fixed on smaller screens */
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav {
+        display: none; /* Hide navigation on smaller screens */
+        flex-direction: column;
+        width: 100%;
+        background-color: #b57864;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu on smaller screens */
+    }
+
+    .search-bar {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar input {
+        width: 70%;
+        margin-right: 10px;
+    }
+
+    .search-bar button {
+        width: 20%;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+  
+}
